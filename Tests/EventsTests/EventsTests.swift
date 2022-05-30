@@ -1,5 +1,5 @@
 import XCTest
-@testable import Events
+@testable import NodejsEvents
 
 final class EventsTests: XCTestCase {
     func testExample() throws {
