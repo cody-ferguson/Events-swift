@@ -13,7 +13,7 @@ public class EventEmitter {
     private var events: [Event] = []
     init(_ Initialevents: [String]){
         for event in Initialevents {
-            events.append(Event(name: event)
+            events.append(Event(name: event))
         }
     }
     public func emit(_ event: String,_ args: Any = ""){
