@@ -1,9 +1,9 @@
-typealias function = (Any) -> Void
-struct Event {
+public typealias function = (Any) -> Void
+public struct Event {
     var name: String
     var function: function?
 }
-extension Event {
+public extension Event {
   static func == (left: Event, right: String) -> Bool {
     return left.name == right
   }
