@@ -1,5 +1,5 @@
-private typealias function = (Any) -> Void
-private struct Event {
+typealias function = (Any) -> Void
+struct Event {
     var name: String
     var function: function?
 }
@@ -10,7 +10,7 @@ extension Event {
 }
 
 open class EventEmitter {
-    private var events: [Event] = []
+    var events: [Event] = []
     init(_ Initialevents: [String]){
         for event in Initialevents {
             events.append(Event(name: event))
@@ -19,7 +19,7 @@ open class EventEmitter {
     public func emit(_ event: String,_ args: Any = ""){
         for currentEvent in events {
             if currentEvent == event {
-                currentEvent.function(args)
+                currentEvent.function!(args)
             }
         }
     }
